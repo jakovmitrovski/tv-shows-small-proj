@@ -1,0 +1,7 @@
+<div class="wrapper" *ngIf="episodes">
+  <h2>Episodes</h2>
+  <ul>
+    <li *ngFor="let episode of episodes"><app-episode-item [episode]="episode"></app-episode-item></li>
+  </ul>
+  <div *ngIf="!episodes.length"><h5>No episodes found !</h5></div>
+</div>

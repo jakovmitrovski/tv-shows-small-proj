@@ -1,0 +1,10 @@
+<div class="wrapper" *ngIf="actor">
+  <div id="left">
+    <img *ngIf="actor.image" [src]="actor.image" alt="Photo of {{actor.name}}">
+    <img *ngIf="!actor.image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/195px-No-Image-Placeholder.svg.png"
+         alt="Photo of {{actor.name}}">
+  </div>
+  <div id="right">
+    <h5>{{actor.name}}</h5>
+  </div>
+</div>

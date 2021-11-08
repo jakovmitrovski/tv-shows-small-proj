@@ -1,0 +1,9 @@
+<div class="wrapper" *ngIf="cast">
+  <h3>Cast</h3>
+  <ul>
+    <li *ngFor="let actor of cast">
+      <app-cast-item [actor]="actor"></app-cast-item>
+    </li>
+  </ul>
+  <div *ngIf="!cast.length"><h5>No cast found !</h5></div>
+</div>

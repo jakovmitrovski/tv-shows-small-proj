@@ -1,0 +1,25 @@
+
+<div class="wrapper" *ngIf="show">
+  <div><h3>{{show.name}}</h3></div>
+  <div class="container">
+    <div class="main-image">
+      <img *ngIf="show.image" [src]="show.image" alt="show image">
+      <img *ngIf="!show.image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/195px-No-Image-Placeholder.svg.png"
+           alt="show image">
+    </div>
+
+    <div class="detail-content">
+      <p *ngIf="show.summary">{{show.summary}}</p>
+      <p *ngIf="show.language">Language: {{show.language}}</p>
+      <p *ngIf="show.genres.length">Genres:
+        <span *ngFor="let genre of show.genres; last as isLast">{{show.genres}}
+          <span *ngIf="!isLast">,</span>
+        </span>
+      </p>
+      <p *ngIf="show.status">Status: {{show.status}}</p>
+      <p *ngIf="show.premiered">Premiered: {{show.premiered}}</p>
+      <p *ngIf="show.officialSite">Official site: <a target="_blank" href="{{show.officialSite}}">{{show.officialSite}}</a></p>
+    </div>
+  </div>
+
+</div>

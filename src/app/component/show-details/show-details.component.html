@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <app-details *ngIf="showDetails" [show]="showDetails"></app-details>
+  <app-loading *ngIf="!showDetails"></app-loading>
+  <div class="container-for-cast-episodes">
+    <app-show-cast *ngIf="showCast" [cast]="showCast"></app-show-cast>
+    <app-show-episodes *ngIf="showEpisodes" [episodes]="showEpisodes"></app-show-episodes>
+  </div>
+</div>
+

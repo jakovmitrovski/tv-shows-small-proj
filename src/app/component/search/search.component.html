@@ -1,0 +1,12 @@
+<div class="input-group">
+  <input #searchBar (input)="onSearch(searchBar.value)" type="search" class="form-control rounded" placeholder="Find show..." aria-label="Search"
+         aria-describedby="search-addon"/>
+  <button type="button" class="btn btn-outline-primary" (click)="onSearch(searchBar.value)">search</button>
+</div>
+<div>
+  <app-loading *ngIf="loading"></app-loading>
+  <app-search-list *ngIf="!loading && shows.length > 0" [shows]="shows"></app-search-list>
+  <app-no-results *ngIf="!loading && shows.length == 0 && searchBar.value"></app-no-results>
+</div>
+
+
